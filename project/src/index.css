@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --accent: 124 58 237;
+  }
+
+  body {
+    @apply bg-gray-950 text-gray-100;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24;
+  }
+
+  .nav-link {
+    @apply cursor-pointer px-4 py-2 text-sm font-medium text-gray-300 hover:text-white transition-colors duration-200;
+  }
+
+  .nav-link.active {
+    @apply text-purple-400;
+  }
+
+  .heading {
+    @apply text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600 mb-8;
+  }
+
+  .card {
+    @apply bg-gray-900 rounded-lg p-6 hover:shadow-xl transition-all duration-300 border border-gray-800 hover:border-purple-500;
+  }
+}
+
+/* Loading Animation */
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 5px solid #FFF;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
